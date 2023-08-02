@@ -1,6 +1,6 @@
 # Tic Tac Bets
-#### Video Demo:  https://youtu.be/K6R_BjNBs-4
-#### Description:
+### Video Demo:  https://youtu.be/K6R_BjNBs-4
+### Description:
 
 ## 1. Training the Computer to Play
 
