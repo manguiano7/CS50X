@@ -1,0 +1,11 @@
+sort1 uses: bubble
+
+How do you know?: performed most slowly on reversed
+
+sort2 uses: merge
+
+How do you know?: performed the most quickly on all runs
+
+sort3 uses: selection
+
+How do you know?: performed the most slowly on sorted list

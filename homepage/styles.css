@@ -1,0 +1,51 @@
+.rowtitle{
+  color: #000000;
+  background-color:  #FFF9D7;
+  font-family:"Palatino Linotype";
+}
+
+.section2 {
+  background-color:  #D7A86E;
+}
+
+.buttons {
+  color: #000000;
+  font-family:"Calibri";
+}
+
+.buttons:hover{
+  background-color:  #FFF9D7;
+  border-radius: 25px;
+}
+
+
+.section3 {
+  background-color:  #a06000;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  }
+
+
+.center {
+  margin-top:25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55%;
+  height: auto;
+  margin-bottom: auto;
+}
+
+.center2 {
+  float: right;
+  margin-top:25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55%;
+  height: auto;
+  margin-bottom: auto;
+}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+{% if page_status == "bought" %}
+<header>
+    <div class="alert alert-primary mb-0 text-center" role="alert">
+        Bought!
+    </div>
+</header>
+{% endif %}
+
+{% if page_status == "sold" %}
+<header>
+    <div class="alert alert-primary mb-0 text-center" role="alert">
+        Sold!
+    </div>
+</header>
+{% endif %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for transaction in transactions %}
+            <tr>
+            <td class="text-start">{{transaction["symbol"]}}</td>
+            <td class="text-start">{{transaction["name"]}}</td>
+            <td class="text-end">{{transaction["SUM(shares)"] }}</td>
+            <td class="text-end">{{transaction["current_price"] | usd}}</td>
+            <td class="text-end">{{transaction["total"] | usd}}</td>
+            <td class="text-end">{{total}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="text-start"></th>
+                <th class="text-start"></th>
+                <th class="text-end"></th>
+                <th class="text-end">CASH</th>
+                <th class="text-end">{{user_cash | usd }}</th>
+            </tr>
+            <tr>
+                <th class="text-start"></th>
+                <th class="text-start"></th>
+                <th class="text-end"></th>
+                <th class="text-end">TOTAL</th>
+                <th class="text-end">{{total_total | usd }}</th>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function multchoice(event)
+            {
+                var trigger = event.target;
+
+                if (trigger.id == "jos")
+                {
+                    document.querySelector('#jos').style.backgroundColor = "green";
+                    document.querySelector('#q1').innerHTML = "Who invented the camera? <br>Correct!";
+                }
+                else if (trigger.id == "alb")
+                {
+                    document.querySelector('#alb'). style.backgroundColor = "red";
+                    document.querySelector('#q1').innerHTML = "Who invented the camera? <br>Incorrect";
+                }
+                else if (trigger.id == "nik")
+                {
+                    document.querySelector('#nik').style.backgroundColor = "red";
+                    document.querySelector('#q1').innerHTML = "Who invented the camera? <br>Incorrect";
+                }
+                else if (trigger.id == "joh")
+                {
+                    document.querySelector('#joh').style.backgroundColor = "red";
+                    document.querySelector('#q1').innerHTML = "Who invented the camera? <br>Incorrect";
+                }
+                else if (trigger.id == "geo")
+                {
+                    document.querySelector('#geo').style.backgroundColor = "red";
+                    document.querySelector('#q1').innerHTML = "Who invented the camera? <br>Incorrect.";
+                }
+            }
+
+            function freeresp(event)
+            {
+                var trigger = event.target;
+
+                if (trigger.id == "confirm")
+                {
+                    if (document.querySelector('#camerayear').value == "1816")
+                    {
+                        document.querySelector('#part2ques').innerHTML = "What year was the camera invented? <br>Correct!";
+                        document.querySelector('#camerayear').style.backgroundColor = "green"
+                    }
+                    else
+                    {
+                        document.querySelector('#part2ques').innerHTML = "What year was the camera invented? <br>Incorrect.";
+                        document.querySelector('#camerayear').style.backgroundColor = "red"
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2 >Part 1: Multiple Choice </h2>
+                <hr>
+                <h3 id = "q1">Who invented the camera? <br> &nbsp;</h3>
+                <button onclick="multchoice(event)" id = "alb">Albert Einsten</button>
+                <button onclick="multchoice(event)" id = "nik">Nikola Tesla</button>
+                <button onclick="multchoice(event)" id = "jos">Joseph Nicéphore Niépce</button>
+                <button onclick="multchoice(event)" id = "joh">Johnston Kodak</button>
+                <button onclick="multchoice(event)" id = "geo">George Eastman</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 id = "part2ques">What year was the camera invented? <br> &nbsp;</h3>
+                <input id = "camerayear" type ="text"> <button onclick="freeresp(event)" id = "confirm">Confirm</button>
+            </div>
+        </div>
+    </body>
+</html>

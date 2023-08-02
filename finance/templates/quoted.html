@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+    {% block main %}
+    <tr>
+    <td>The current stock price for {{stock["name"]}} is {{stock["price"] | usd}}</td>
+    </tr>
+{% endblock %}
+
