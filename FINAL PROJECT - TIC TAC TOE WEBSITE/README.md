@@ -99,3 +99,7 @@ When a bet is placed, a request is made on app.py and the corresponding amount o
 
 ### The Past Bets Page
 Upon clicking on Past Bets, a table showing all bets placed by the user, the coins won or lost from bets placed, the coins won from playing, and the total coins, is displayed. The table includes the bet amount, the time the bet was placed, the time the bet was settled, the bet status (won, lost, or pending).
+
+### Running the App
+To run, in terminal, type: "export FLASK_APP=app.py"
+Then type "flask run"
